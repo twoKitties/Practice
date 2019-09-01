@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29215.179
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naming", "Naming\Naming.csproj", "{796947BC-4F1D-462F-BA36-C208B6BC1F3E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrajectorySim", "TrajectorySim\TrajectorySim.csproj", "{95D11947-0EEA-41F2-8A92-E6A01CC9EE66}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{796947BC-4F1D-462F-BA36-C208B6BC1F3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{796947BC-4F1D-462F-BA36-C208B6BC1F3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{796947BC-4F1D-462F-BA36-C208B6BC1F3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95D11947-0EEA-41F2-8A92-E6A01CC9EE66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95D11947-0EEA-41F2-8A92-E6A01CC9EE66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95D11947-0EEA-41F2-8A92-E6A01CC9EE66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95D11947-0EEA-41F2-8A92-E6A01CC9EE66}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
