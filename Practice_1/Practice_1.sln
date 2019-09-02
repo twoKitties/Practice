@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrajectorySim", "Trajectory
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataPrivacy", "ConsoleApp1\DataPrivacy.csproj", "{5299D8B8-4673-4673-B047-10BCFB057196}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Separating", "Separating\Separating.csproj", "{5A56A1AA-132E-4782-951A-DD29BF5B9588}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{5299D8B8-4673-4673-B047-10BCFB057196}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5299D8B8-4673-4673-B047-10BCFB057196}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5299D8B8-4673-4673-B047-10BCFB057196}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A56A1AA-132E-4782-951A-DD29BF5B9588}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A56A1AA-132E-4782-951A-DD29BF5B9588}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A56A1AA-132E-4782-951A-DD29BF5B9588}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A56A1AA-132E-4782-951A-DD29BF5B9588}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
