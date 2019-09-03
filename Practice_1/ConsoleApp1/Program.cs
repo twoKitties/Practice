@@ -17,18 +17,19 @@ namespace DataPrivacy
     class Bag
     {
         private List<Item> _items;
-        public int MaxWeight { get; set; }
+        private int _maxWeight;
 
         public Bag(int maxWeight)
         {
             _items = new List<Item>();
-            MaxWeight = maxWeight;
+            _maxWeight = maxWeight;
         }
+
         public void AddItem(string name, int weight)
         {
             int currentWeight = _items.Sum(item => item.Weight);
 
-            if (currentWeight + weight > MaxWeight)
+            if (currentWeight + weight > _maxWeight)
                 throw new InvalidOperationException();
 
             var targetItem = new Item(weight, name);
