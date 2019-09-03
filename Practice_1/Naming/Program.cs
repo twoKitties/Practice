@@ -57,9 +57,9 @@ namespace Naming
             _users.AddRange(users);
         }
 
-        public User Get(string name) => _users.Find(item => string.Equals(item.Name, name));
+        public User GetByName(string name) => _users.Find(item => string.Equals(item.Name, name));
 
-        public User Get(int id) => _users.Find(item => item.Id == id);
+        public User GetById(int id) => _users.Find(item => item.Id == id);
 
         public User[] GetAll() => _users.ToArray();
 
