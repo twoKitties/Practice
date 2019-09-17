@@ -1,5 +1,7 @@
 ﻿
 using System;
+using System.Net;
+using System.Threading.Tasks;
 
 namespace Callback
 {
@@ -7,9 +9,8 @@ namespace Callback
     {
         static void Main(string[] args)
         {
-            Server server = new Server("http//requesthandler.net");
             RequestSender sender = new RequestSender();
-            sender.Request(server.GetUrl(), BlockUrl);
+            sender.RequestAsync("http://bbb.net", BlockUrl);
         }
 
         private static void BlockUrl(string url) => Console.WriteLine($"{url} is blocked in your contry");
@@ -19,11 +20,14 @@ namespace Callback
     {
         public delegate void Handle(string url);
 
-        public async void Request(string url, Handle result)
+        public async Task RequestAsync(string url, Handle result)
         {
-            if (string.IsNullOrEmpty(url))
-                return;
-            else
+            bool callback = await Task.Run(() =>
+            {
+                return true;
+            });
+
+            if (callback)
                 result(url);
         }
     }
