@@ -8,12 +8,35 @@ namespace Sorting
     {
         static void Main(string[] args)
         {
-            Product product1 = new Product("cup", 10, 1);
-            Product product2 = new Product("wine", 100, 2);
-            Product product3 = new Product("tv", 1000, 3);
+            Product product1 = new Product("cup", 200, 2);
+            Product product2 = new Product("wine", 100, 1);
+            Product product3 = new Product("tv", 150, 3);
+            List<Product> products = new List<Product>() { product1, product2, product3 };
 
-            Products productList = new Products(product1, product2, product3);
-            
+            while (true)
+            {
+                Console.WriteLine("Sorting option: 1 - by name, 2 - by level, 3 - by price");
+                var input = Console.ReadKey();
+
+                switch (input.Key)
+                {
+                    case ConsoleKey.D1:
+                        products.Sort((item1, item2) => item1.Name.CompareTo(item2.Name));
+                        break;
+                    case ConsoleKey.D2:
+                        products.Sort((item1, item2) => item1.Level.CompareTo(item2.Level));
+                        break;
+                    case ConsoleKey.D3:
+                        products.Sort((item1, item2) => item1.Price.CompareTo(item2.Price));
+                        break;
+                    default:
+                        Console.WriteLine("Enter valid key");
+                        break;
+                }
+                Console.Clear();
+                foreach (var item in products)
+                    Console.WriteLine($"item {item.Name}, {item.Level}, {item.Price}");
+            }          
         }
     }
 
@@ -29,23 +52,5 @@ namespace Sorting
             Price = price;
             Level = level;
         }
-    }
-
-    class Products
-    {
-        private List<Product> _products;
-
-        public Products(params Product[] products)
-        {
-            _products = new List<Product>(products);
-        }
-
-        public Product[] GetAll() => _products.ToArray();
-
-        public Product[] GetSortedByName() => _products.OrderBy(item => item.Name).ToArray();
-
-        public Product[] GetSortedByPrice() => _products.OrderBy(item => item.Price).ToArray();
-
-        public Product[] GetSortedByLevel() => _products.OrderBy(item => item.Level).ToArray();
     }
 }
