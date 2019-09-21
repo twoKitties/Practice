@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace TrajectorySim
 {
@@ -13,7 +14,7 @@ namespace TrajectorySim
             Projectiles projectiles = new Projectiles(proj1, proj2, proj3);
             Random random = new Random();
 
-            while (true)
+            while (projectiles.GetAll().Any(proj => proj.IsAlive))
             {
                 Projectiles.CheckCollistion(proj1, proj2);
                 Projectiles.CheckCollistion(proj1, proj3);
